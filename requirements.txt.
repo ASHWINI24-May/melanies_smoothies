@@ -5,9 +5,9 @@ streamlit==1.31.1
 import snowflake.connector
 
 cnn = snowflake.connector.connect(
-    user='your_username',
-    password='your_password',
-    account='your_account'
+    user='ASHWINI24',
+    password='Learnsnow@24',
+    account='TQWEKGS.WW35913'
 )
 
 query = "SELECT DATE_TRUNC('DAY', STARTTIME) START_DAY, COUNT(*) AS NUM_TRIPS FROM TRIPS_VW GROUP BY 1 ORDER BY 1;"
