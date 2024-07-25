@@ -1,18 +1,4 @@
 # requirements.txt
 snowflake-connector-python
 snowflake-snowpark-python==1.0.0
-streamlit==1.10.0
-import snowflake.connector
-
-cnn = snowflake.connector.connect(
-    user='ASHWINI24',
-    password='Learnsnow@24',
-    account='TQWEKGS.WW35913'
-)
-
-query = "SELECT DATE_TRUNC('DAY', STARTTIME) START_DAY, COUNT(*) AS NUM_TRIPS FROM TRIPS_VW GROUP BY 1 ORDER BY 1;"
-cur = cnn.cursor()
-cur.execute(query)
-df = cur.fetch_pandas_all()
-cur.close()
-cnn.close()
+streamlit==1.31.0
