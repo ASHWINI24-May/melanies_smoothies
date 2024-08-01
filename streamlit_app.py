@@ -14,7 +14,11 @@ cnx=st.connection("snowflake")
 session = cnx.session()
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('Fruit_Name'),col('SEARCH_ON'))
-st.dataframe(data=my_dataframe, use_container_width=True)
+#st.dataframe(data=my_dataframe, use_container_width=True)
+#st.stop()
+#Convert the Snowpark Dataframe to a Pandas Dataframe so we can use the Loc function
+pd_df=my_dataframe.to pandas()
+st.dataframe(pd_df)
 st.stop()
 
 ingredients_list = st.multiselect(
