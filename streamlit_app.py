@@ -40,7 +40,6 @@ if ingredients_list:
 for fruit_chosen in ingredients_list:
        ingredients_string += fruit_chosen + ''
 
-UPDATE smoothies.public.fruit_options
 SET SEARCH_ON = 'new_value'
 WHERE Fruit_Name = 'fruit_chosen';
 search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen,'SEARCH_ON'].iloc[0]
