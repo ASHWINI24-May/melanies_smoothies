@@ -32,7 +32,6 @@ ingredients_list = st.multiselect(
 )
 
 ingredients_string =''
-fruit_chosen =''
 
 if ingredients_list:
     ingredients_string =''
