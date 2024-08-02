@@ -36,7 +36,7 @@ ingredients_string =''
 if ingredients_list:
     ingredients_string =''
 
-
+fruit_chosen = 'Fruit_Name'
 for fruit_chosen in ingredients_list:
        ingredients_string += fruit_chosen + ''
 
